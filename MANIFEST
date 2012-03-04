@@ -1,0 +1,13 @@
+Changes
+MANIFEST
+Makefile.PL
+README
+lib/Math/NT/BQF.pm
+lib/Math/NT/BQF/all.pm
+lib/Math/NT/BQF/Lite.pm
+lib/Math/NT/BQF/Heavy.pm
+lib/Math/NT/BQF/Util.pm
+t/00-load.t
+t/manifest.t
+t/pod-coverage.t
+t/pod.t
