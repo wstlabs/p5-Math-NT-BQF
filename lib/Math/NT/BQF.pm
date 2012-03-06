@@ -2,7 +2,7 @@ package Math::NT::BQF;
 use warnings;
 use strict;
 use Scalar::Util qw( blessed reftype refaddr );
-use Class::Utils qw( is_loaded );
+use Class::Inspector;
 use Class::Options;
 use Module::Load;
 use Log::EZ; # dev only
@@ -13,7 +13,7 @@ use Math::NT::BQF::Util qw(:assert);
 BEGIN:  {
     $main::DEBUG = 1
 }
-our $VERSION = '0.01c';
+our $VERSION = '0.001';
 
 use overload qw| 
     ""  stringify
@@ -51,7 +51,7 @@ sub new  {
         confess "bad package configuration" unless defined $weight;
         my $impl = $IMPL{$weight};
         trace2 "$weight => $impl";
-        load $impl if !is_loaded($impl);
+        load $impl unless Class::Inspector->loaded($impl);
         $impl->new(@args)
     }
     else  {
