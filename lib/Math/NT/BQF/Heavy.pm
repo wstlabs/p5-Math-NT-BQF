@@ -1,7 +1,7 @@
 package Math::NT::BQF::Heavy;
 use warnings;
 use strict;
-use Log::Inline;
+use Log::EZ; # dev only
 use Math::NT::BQF::Util qw(:all);
 use Scalar::Util qw( refaddr );
 use Moose;
@@ -30,25 +30,5 @@ sub serial  {
 
 __END__
 
-
-
-package Math::NT::BQF::Lite;
-use warnings;
-use strict;
-use Log::Inline;
-use Math::NT::BQF::Util qw(:all);
-use Scalar::Util qw( refaddr );
-use base 'Math::NT::BQF';
-
-sub evaluate  {
-    my ($self,$x) = @_; 
-    confess "need an input value" unless defined $x;
-    my ($A,$B,$C) = $self->get_ABC;
-    $A*$x*$x + $B*$x*$y * $C*$y*$y
-}
-
-1;
-
-__END__
 
 

@@ -1,7 +1,7 @@
 package Math::NT::BQF::Lite;
 use warnings;
 use strict;
-use Log::Inline;
+use Log::EZ; # dev only
 use Math::NT::BQF::Util qw(:all);
 use Scalar::Util qw( refaddr );
 use base 'Math::NT::BQF';

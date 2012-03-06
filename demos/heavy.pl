@@ -1,9 +1,8 @@
 use strict;
 use warnings;
-use Log::Inline;
+use Log::EZ;
 use Getopt::Long;
 use Math::NT::BQF qw(:heavy);
-# use Math::NT::BQF::Heavy;
 
 our $DEBUG = 1;
 

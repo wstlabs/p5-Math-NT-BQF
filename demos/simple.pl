@@ -1,6 +1,6 @@
 use strict;
 use warnings;
-use Log::Inline;
+use Log::EZ;
 use Getopt::Long;
 require Math::NT::BQF;
 

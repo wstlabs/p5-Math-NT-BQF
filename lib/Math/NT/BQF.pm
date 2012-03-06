@@ -5,7 +5,7 @@ use Scalar::Util qw( blessed reftype refaddr );
 use Class::Utils qw( is_loaded );
 use Class::Options;
 use Module::Load;
-use Log::Inline;
+use Log::EZ; # dev only
 use Readonly;
 use Carp;
 use Math::NT::BQF::Util qw(:assert);
