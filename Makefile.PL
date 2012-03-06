@@ -18,6 +18,7 @@ WriteMakefile(
         'Scalar::Util' => 0.23,
         'Log::EZ' => 0.001,
         'Readonly' => 1.03,
+        'Moose' => 1.2
     },
     dist                => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
     clean               => { FILES => 'Math-NT-BQF-*' },

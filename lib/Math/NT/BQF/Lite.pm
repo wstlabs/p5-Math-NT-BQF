@@ -1,11 +1,11 @@
 package Math::NT::BQF::Lite;
 use warnings;
 use strict;
-use Log::EZ; # dev only
 use Math::NT::BQF::Util qw(:all);
 use Scalar::Util qw( refaddr );
-use base 'Math::NT::BQF';
+use parent 'Math::NT::BQF';
 use Carp;
+# use Log::EZ; 
 
 {
     my (%A,%B,%C);

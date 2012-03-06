@@ -1,10 +1,10 @@
 package Math::NT::BQF::Heavy;
 use warnings;
 use strict;
-use Log::EZ; # dev only
 use Math::NT::BQF::Util qw(:all);
 use Scalar::Util qw( refaddr );
 use Moose;
+# use Log::EZ; 
 
 # our @ISA = qw('Math::NT::BQF');
 
