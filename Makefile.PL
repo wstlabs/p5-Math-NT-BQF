@@ -4,7 +4,7 @@ use ExtUtils::MakeMaker;
 
 WriteMakefile(
     NAME                => 'Math::NT::BQF',
-    AUTHOR              => q{highlinelabs <nada@null.org>},
+    AUTHOR              => q{WST <nobody@null.org>},
     VERSION_FROM        => 'lib/Math/NT/BQF.pm',
     ABSTRACT_FROM       => 'lib/Math/NT/BQF.pm',
     ($ExtUtils::MakeMaker::VERSION >= 6.3002
