@@ -2,7 +2,7 @@ package Math::NT::BQF::Visit;
 use warnings;
 use strict;
 use Params::Validate;
-use Assert::Std qw(:types);
+use Assert::Inline qw(:types);
 use Exporter::Tidy
     other => [qw| 
         visit_simple
