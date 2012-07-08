@@ -5,15 +5,15 @@ use Scalar::Util qw( blessed reftype refaddr );
 use Class::Inspector;
 use Class::Options;
 use Module::Load;
-use Log::EZ; # dev only
 use Readonly;
-use Carp;
 use Math::NT::BQF::Util qw(:assert);
+use Log::EZ; # dev only
+use Carp;
 
 BEGIN:  {
     $main::DEBUG = 1
 }
-our $VERSION = '0.001';
+our $VERSION = '0.002';
 
 use overload qw| 
     ""  stringify
@@ -63,9 +63,13 @@ sub evaluate  {
     my ($self,$x,$y) = @_;
     confess "need an input value x" unless defined $x;
     confess "need an input value y" unless defined $y;
-    # trace "self = $self [$x,$y]";
     my ($A,$B,$C) = $self->get_ABC;
-    $A*$x*$x + $B*$x*$y * $C*$y*$y
+    # trace "(A,B,C) = ($A,$B,$C)";
+    # my $t = 
+    $A*$x*$x + $B*$x*$y + $C*$y*$y
+    # ;
+    # trace "($x,$y) => $t";
+    # return $t
 }
 
 sub get_ABC  {
@@ -102,106 +106,3 @@ sub is_equiv_to { bqf_are_equiv( $_[0], $_[1] ) }
 
 __END__
 
-=head1 NAME
-
-Math::NT::BQF - binary quadratic forms 
-
-=head1 VERSION
-
-Version 0.01
-
-=cut
-
-
-=head1 SYNOPSIS
-
-Quick summary of what the module does.
-
-Perhaps a little code snippet.
-
-    use Math::NT::BQF;
-
-    my $foo = Math::NT::BQF->new();
-    ...
-
-=head1 EXPORT
-
-A list of functions that can be exported.  You can delete this section
-if you don't export anything, such as for a purely object-oriented module.
-
-=head1 SUBROUTINES/METHODS
-
-=head2 function1
-
-=cut
-
-sub function1 {
-}
-
-=head2 function2
-
-=cut
-
-sub function2 {
-}
-
-=head1 AUTHOR
-
-highlinelabs, C<< <nada at null.org> >>
-
-=head1 BUGS
-
-Please report any bugs or feature requests to C<bug-math-nt-bqf at rt.cpan.org>, or through
-the web interface at L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Math-NT-BQF>.  I will be notified, and then you'll
-automatically be notified of progress on your bug as I make changes.
-
-
-
-
-=head1 SUPPORT
-
-You can find documentation for this module with the perldoc command.
-
-    perldoc Math::NT::BQF
-
-
-You can also look for information at:
-
-=over 4
-
-=item * RT: CPAN's request tracker
-
-L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=Math-NT-BQF>
-
-=item * AnnoCPAN: Annotated CPAN documentation
-
-L<http://annocpan.org/dist/Math-NT-BQF>
-
-=item * CPAN Ratings
-
-L<http://cpanratings.perl.org/d/Math-NT-BQF>
-
-=item * Search CPAN
-
-L<http://search.cpan.org/dist/Math-NT-BQF/>
-
-=back
-
-
-=head1 ACKNOWLEDGEMENTS
-
-
-=head1 LICENSE AND COPYRIGHT
-
-Copyright 2010 highlinelabs.
-
-This program is free software; you can redistribute it and/or modify it
-under the terms of either: the GNU General Public License as published
-by the Free Software Foundation; or the Artistic License.
-
-See http://dev.perl.org/licenses/ for more information.
-
-
-=cut
-
-1; # End of Math::NT::BQF

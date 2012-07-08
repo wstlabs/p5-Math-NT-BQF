@@ -7,6 +7,7 @@ lib/Math/NT/BQF/all.pm
 lib/Math/NT/BQF/Lite.pm
 lib/Math/NT/BQF/Heavy.pm
 lib/Math/NT/BQF/Util.pm
+lib/Math/NT/BQF/Visit.pm
 t/00-load.t
 t/manifest.t
 t/pod-coverage.t

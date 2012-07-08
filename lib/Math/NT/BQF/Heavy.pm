@@ -6,17 +6,9 @@ use Scalar::Util qw( refaddr );
 use Moose;
 # use Log::EZ; 
 
-# our @ISA = qw('Math::NT::BQF');
-
 has A => ( is => 'rw', isa => 'Int', 'reader' => 'get_A', 'writer' => 'set_A' );
 has B => ( is => 'rw', isa => 'Int', 'reader' => 'get_B', 'writer' => 'set_B' );
 has C => ( is => 'rw', isa => 'Int', 'reader' => 'get_C', 'writer' => 'set_C' );
-# has B => ( is => 'rw', isa => 'Int');
-# has C => ( is => 'rw', isa => 'Int');
-
-# sub get_A { $_[0]->A }
-# sub get_B { $_[0]->B }
-# sub get_C { $_[0]->C }
 
 sub serial  {
     my $self = shift;

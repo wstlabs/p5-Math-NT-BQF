@@ -4,6 +4,7 @@ use strict;
 use Math::NT::BQF::Util qw(:all);
 use Scalar::Util qw( refaddr );
 use parent 'Math::NT::BQF';
+use Log::EZ;
 use Carp;
 # use Log::EZ; 
 
@@ -77,7 +78,11 @@ sub _eval_form_at_ref  {
     # trace2 "ref = $ref, x = $x, y = $y";
     my $inst = get_inst($ref);
     # trace  "$ref => $inst  [$x,$y]";
+    # my $t = 
     $inst->evaluate($x,$y)
+    # ;
+    # trace  "($x,$y) => $t";
+    # return $t
 }
 
 1;
